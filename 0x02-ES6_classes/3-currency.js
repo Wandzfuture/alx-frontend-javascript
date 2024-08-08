@@ -20,20 +20,22 @@ export default class Currency {
     return value;
   }
 
-  // Getter and setter for code
+  // Getter for code
   get code() {
     return this._code;
   }
 
+  // Setter for code
   set code(value) {
     this._code = this._validateCode(value);
   }
 
-  // Getter and setter for name
+  // Getter for name
   get name() {
     return this._name;
   }
 
+  // Setter for name
   set name(value) {
     this._name = this._validateName(value);
   }

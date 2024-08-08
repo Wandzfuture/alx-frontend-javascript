@@ -22,20 +22,22 @@ export default class Pricing {
     return value;
   }
 
-  // Getter and setter for amount
+  // Getter for amount
   get amount() {
     return this._amount;
   }
 
+  // Setter for amount
   set amount(value) {
     this._amount = this._validateAmount(value);
   }
 
-  // Getter and setter for currency
+  // Getter for currency
   get currency() {
     return this._currency;
   }
 
+  // Setter for currency
   set currency(value) {
     this._currency = this._validateCurrency(value);
   }

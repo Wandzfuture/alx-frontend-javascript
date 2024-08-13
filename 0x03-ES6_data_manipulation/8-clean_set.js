@@ -1,8 +1,9 @@
 function cleanSet(set, startString) {
-  return [...set]
-    .filter(value => value.startsWith(startString))
-    .map(value => value.slice(startString.length))
-    .join('-');
+  let result = '';
+  for (let value of set) {
+    if (value.startsWith(startString)) {
+      result += value.substring(startString.length) + '-';
+    }
+  }
+  return result.trim().replace(/-$/, ''); // remove trailing dash
 }
-
-export default cleanSet;
